@@ -2,21 +2,6 @@
 #include "integer.hpp"
 
 
-TEST(ParseFromString, Integer)
-{
-    Pw::Integer p;
-
-    p.parse(std::string("-45"));
-    ASSERT_EQ(p.value(), -45);
-
-    p.parse(std::string("30"));
-    ASSERT_EQ(p.value(), 30);
-
-    p.parse(std::string("4321"));
-    ASSERT_EQ(p.value(), 4321);
-}
-
-
 TEST(Integer, ParseFromString)
 {
     Pw::Integer p;
