@@ -18,7 +18,15 @@ namespace Pw
         BigInteger(std::string str);
 
 
+        /**
+         * @brief 
+         * 
+         * @return std::vector<int> 
+         */
         std::vector<int> value() const;
+
+
+        std::string toString();
 
     private:
         std::vector<int> data; 

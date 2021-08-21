@@ -1,4 +1,5 @@
 #include "big_integer.hpp"
+#include <iterator>
 
 Pw::BigInteger::BigInteger(std::string str)
     :   data({})
@@ -15,4 +16,17 @@ Pw::BigInteger::BigInteger(std::string str)
 std::vector<int> Pw::BigInteger::value() const
 {
     return data;
+}
+
+
+std::string Pw::BigInteger::toString()
+{
+    std::stringstream res;
+    std::copy(
+        data.begin(), 
+        data.end(), 
+        std::ostream_iterator<int>(res, "")
+    );
+            
+    return res.str();
 }
